@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>EmpowerMap — Prototype</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <!-- Our CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>EmpowerMap — Personalized Accessibility Map</h1>
+  </header>
+
+  <!-- Accessibility filters -->
+  <div id="controls">
+    <span>Show only:</span>
+    <label class="filter-label"><input type="checkbox" id="filter-wheelchair" checked> Wheelchair</label>
+    <label class="filter-label"><input type="checkbox" id="filter-audio" checked> Audio signals</label>
+    <label class="filter-label"><input type="checkbox" id="filter-braille" checked> Braille</label>
+    <label class="filter-label"><input type="checkbox" id="filter-ramp" checked> Ramps</label>
+  </div>
+
+  <!-- Map -->
+  <div id="map"></div>
+
+  <!-- Add Place Form -->
+  <div id="form-container">
+    <h2>Add a Place</h2>
+    <form id="addPlaceForm">
+      <label>Name: <input type="text" id="placeName" required></label>
+      <label>Latitude: <input type="number" id="placeLat" step="any" required></label>
+      <label>Longitude: <input type="number" id="placeLng" step="any" required></label>
+      <fieldset>
+        <legend>Accessibility Features:</legend>
+        <label><input type="checkbox" value="Wheelchair"> Wheelchair</label>
+        <label><input type="checkbox" value="Audio"> Audio signal</label>
+        <label><input type="checkbox" value="Braille"> Braille</label>
+        <label><input type="checkbox" value="Ramp"> Ramp</label>
+      </fieldset>
+      <label>Review: <textarea id="placeReview"></textarea></label>
+      <label>Rating: 
+        <select id="placeRating">
+          <option value="5">★★★★★</option>
+          <option value="4">★★★★</option>
+          <option value="3">★★★</option>
+          <option value="2">★★</option>
+          <option value="1">★</option>
+        </select>
+      </label>
+      <button type="submit">Add Place</button>
+    </form>
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- Our Script -->
+  <script src="script.js"></script>
+</body>
+</html>
