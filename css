@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  padding: 1rem;
+  background: #2563eb;
+  color: white;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+#controls {
+  padding: 0.5rem;
+  background: #f3f4f6;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filter-label {
+  margin-right: 1rem;
+}
+
+#map {
+  height: 75vh;
+}
+
+#form-container {
+  padding: 1rem;
+  background: #f9fafb;
+}
+
+label {
+  display: block;
+  margin-top: 0.5rem;
+}
+
+button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
